@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    border: 1px solid black;
+    width: 310px;
+    margin: 2em;
+    padding: 0.5em;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+img {
+    width: 290px;
+    height: 200px;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.red {
+    color: red;
+}
