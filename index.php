@@ -13,8 +13,27 @@
 
 <body>
     <div id="app">
+        <form action="index.php" method="GET">
+            <label for="">Seleziona marca auto</label>
+            <select @change="filter" v-model="marcaArray" name="type" id="type">
+                <option value="all">All</option>
+                <option value="Ford">Ford</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Fiat">Fiat</option>
+            </select>
+        </form>
+        <form action="index.php" method="GET">
+            <label for="">Seleziona colore</label>
+            <select @change="filter" v-model="colorArray" name="color" id="color">
+                <option value="all">All</option>
+                <option value="Bianco">Bianco</option>
+                <option value="Rosso">Rosso</option>
+                <option value="Blu">Blu</option>
+                <option value="Grigio">Grigio</option>
+            </select>
+        </form>
         <div class="d-flex">
-            <div v-for="car in cars" class="container">
+            <div v-for="car in carsFiltered" class="container">
                 <div v-for="(element, key) in car" class="">
                     <div v-if="key == 'immagine'">
                         <img style="order: -1" :src="element" />
@@ -27,10 +46,10 @@
         </div>
     </div>
 
-    
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-<script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
